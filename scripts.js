@@ -21,10 +21,7 @@ let pokemonPlayers = (id) => {
           image: data.sprites.front_default
         };
         localStorage.setItem("selectedPokemon", JSON.stringify(selectedPokemon)); //saves the selection
-        // const pokemonElements = document.querySelectorAll(".pokemon");
-        // pokemonElements.forEach((pokemon) => {
-        //   pokemon.classList.remove("selected");
-        // });
+     
         div.classList.add("selected");
       });
       div.appendChild(img);
@@ -48,5 +45,7 @@ Promise.all(promises).then((results) => {
 });
 
 
+
+// ------------------------------------------------------ Fight Section ----------------------------------------------//
 
 

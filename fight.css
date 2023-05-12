@@ -1,0 +1,30 @@
+
+/* adjusting the size of the background to fit the screen */
+body {
+    background-image: url(./background-images/Arena-Background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+  
+.scoreboard {
+    font-family: "Pokemon Solid", sans-serif;
+    font-size: 38px;
+    text-align: center;
+    color: #ffcc00; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    margin-top: 80px;
+  }
+  
+  .winner {
+    font-size: 42px;
+    color: #ff0000; 
+    margin-top: 40px;
+  }
+  
+  .scoreboard span {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+  
+  
