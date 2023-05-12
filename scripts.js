@@ -1,3 +1,14 @@
+
+
+// * smoothly scrolls to the "fight-section" when the selected button is pressed
+document.getElementById('select').addEventListener('click', function() {
+document.getElementById('fight-section').scrollIntoView({
+  behavior: 'smooth'
+});
+});
+
+
+
 // import "./styles.css";
 
 let selectedCharacters = []
@@ -45,6 +56,7 @@ for (let i = 1; i <= 25; i++) {
 
 Promise.all(promises).then((results) => {
   let pokeDataHere = document.getElementById("pokeDataHere");
+  console.log(pokeDataHere)
   results.forEach((result) => {
     pokeDataHere.appendChild(result);
   });
@@ -53,3 +65,48 @@ Promise.all(promises).then((results) => {
 
 
 // ------------------------------------------------------ Fight Section ----------------------------------------------//
+
+
+function theWinner(selectedCharacters) {
+
+  let player1 = selectedCharacters[0].name;
+  let player2 = selectedCharacters[1].name;
+  const p = document.createElement(`p`)
+
+  
+
+
+  let randomNumber = Math.floor(Math.random() * 2) + 1;
+
+  let winner = document.getElementById(`winner`);
+
+
+  if(randomNumber === 1) {
+    p.innerText = player1 + `Is The Winner`
+    winner.appendChild(p)
+  } else if(randomNumber === 2) {
+    p.innerText = player2 + `Is The Winner`
+    winner.appendChild(p)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+ 
+

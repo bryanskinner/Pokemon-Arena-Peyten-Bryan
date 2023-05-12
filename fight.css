@@ -9,7 +9,7 @@ body {
 
   
 .scoreboard {
-    font-family: "Pokemon Solid", sans-serif;
+    font-family: 'Tilt Warp', cursive;
     font-size: 38px;
     text-align: center;
     color: #ffcc00; 
@@ -18,6 +18,7 @@ body {
   }
   
   .winner {
+    font-family: 'Tilt Warp', cursive;
     font-size: 42px;
     color: #ff0000; 
     margin-top: 40px;
@@ -26,6 +27,36 @@ body {
   .scoreboard span {
     text-decoration-line: underline;
     text-decoration-style: dotted;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .button {
+    font-family: 'Tilt Warp', cursive;
+    background-color: #FFCB05;
+    border: none;
+    color: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    /* font-family: 'Arial', sans-serif; */
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #F8B200;
   }
   
 
