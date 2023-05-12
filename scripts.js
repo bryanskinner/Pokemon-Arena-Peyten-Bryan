@@ -53,4 +53,6 @@ Promise.all(promises).then((results) => {
 
 // ------------------------------------------------------ Fight Section ----------------------------------------------//
 
-
+function selectedTwo(selectedCharacters) {
+  
+}
