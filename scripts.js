@@ -45,6 +45,7 @@ for (let i = 1; i <= 25; i++) {
 
 Promise.all(promises).then((results) => {
   let pokeDataHere = document.getElementById("pokeDataHere");
+  console.log(pokeDataHere)
   results.forEach((result) => {
     pokeDataHere.appendChild(result);
   });
@@ -54,6 +55,60 @@ Promise.all(promises).then((results) => {
 
 // ------------------------------------------------------ Fight Section ----------------------------------------------//
 
-function selectedTwo(selectedCharacters) {
+function theWinner(selectedCharacters) {
+
+  let player1 = selectedCharacters[0].name;
+  let player2 = selectedCharacters[1].name;
+  const p = document.createElement(`p`)
+
   
+
+
+  let randomNumber = Math.floor(Math.random() * 2) + 1;
+
+  let winner = document.getElementById(`winner`);
+
+
+  if(randomNumber === 1) {
+    p.innerText = player1 + `Is The Winner`
+    winner.appendChild(p)
+  } else if(randomNumber === 2) {
+    p.innerText = player2 + `Is The Winner`
+    winner.appendChild(p)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+  // const selectedPokemonContainer = document.getElementById("selectedPokemonContainer");
+
+  // selectedPokemonContainer.innerHTML = "";
+
+  // selectedCharacters.forEach((selectedPokemon) => {
+  //   const div = document.createElement("div");
+  //   const p = document.createElement("p");
+  //   const img = document.createElement("img");
+
+  //   img.src = selectedPokemon.image;
+  //   p.innerText = selectedPokemon.name.toUpperCase();
+
+  //   div.appendChild(img);
+  //   div.appendChild(p);
+
+  //   selectedPokemonContainer.appendChild(div);
+  // });
+
+
