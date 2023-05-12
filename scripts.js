@@ -12,6 +12,7 @@ let pokemonPlayers = (id) => {
       const div = document.createElement("div");
       const p = document.createElement("p");
       const img = document.createElement("img");
+      img.setAttribute("class", charName)
       div.setAttribute("id", "character");
       div.setAttribute("data-name", charName)
       div.setAttribute("data.image", data.sprites.front_default)
