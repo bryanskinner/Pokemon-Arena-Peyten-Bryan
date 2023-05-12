@@ -66,6 +66,7 @@ Promise.all(promises).then((results) => {
 
 // ------------------------------------------------------ Fight Section ----------------------------------------------//
 
+
 function theWinner(selectedCharacters) {
 
   let player1 = selectedCharacters[0].name;
@@ -108,3 +109,4 @@ function theWinner(selectedCharacters) {
 
 
  
+
