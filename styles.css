@@ -1,8 +1,10 @@
-body {
+.selection-section {
   background-image: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,13 +22,12 @@ header {
   font-family: 'Tilt Warp', cursive;
   color: #ffcc03;
   -webkit-text-stroke: 5px #3466AF;
-	text-shadow: -1px 1px 0px #3466AF,
-				  1px 1px 0px #3466AF,
-				  1px -1px 0px #3466AF,
-				  -1px -1px 0px #3466AF;
+  text-shadow: -1px 1px 0px #3466AF,
+    1px 1px 0px #3466AF,
+    1px -1px 0px #3466AF,
+    -1px -1px 0px #3466AF;
 }
 
-/* characters */
 
 .container {
   /* background-color: gray; */
@@ -39,7 +40,8 @@ header {
   padding: 2%;
   border: solid 5px black;
   padding-bottom: 4%;
-  backdrop-filter: blur(10px)
+  backdrop-filter: blur(10px);
+  overflow: auto;
 }
 
 #character {
@@ -49,23 +51,105 @@ header {
   align-items: center;
 }
 
-
-/* Arrows at the bottom of the page */
-.arrows{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2%;
-  margin-bottom: 1%;
+.select {
+  display: inline-block;
+  padding: 20px 30px;
+  background-color: #ffcc03;
+  color: #ffffff;
+  font-family: 'Tilt Warp', cursive;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-a:visited{
+.select:hover {
+  background-color: #ffcc03;
+  opacity: 0.8;
+}
+
+
+/* a:visited {
   color: black;
-}
+} */
 
 .selected {
   border: 3px solid #ffcc03;
   border-radius: 5px;
-
 }
+
+
+
+
+
+
+.fight-section {
+  background-image: url(./background-images/Arena-Background.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.scoreboard {
+  font-family: 'Tilt Warp', cursive;
+  font-size: 38px;
+  text-align: center;
+  color: #ffcc00; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  margin-top: -20rem;
+}
+
+.winner {
+  font-family: 'Tilt Warp', cursive;
+  font-size: 42px;
+  color: #ff0000; 
+  margin-top: 20px;
+}
+
+.scoreboard span {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+.button {
+  font-family: 'Tilt Warp', cursive;
+  background-color: #FFCB05;
+  border: none;
+  color: red;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+  /* font-family: 'Arial', sans-serif; */
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+  top: 35%;
+}
+
+.button:hover {
+  background-color: #F8B200;
+}
+
+
+
+
+
+
+

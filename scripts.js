@@ -1,3 +1,14 @@
+
+
+// * smoothly scrolls to the "fight-section" when the selected button is pressed
+document.getElementById('select').addEventListener('click', function() {
+document.getElementById('fight-section').scrollIntoView({
+  behavior: 'smooth'
+});
+});
+
+
+
 // import "./styles.css";
 
 let selectedCharacters = []
@@ -89,26 +100,11 @@ function theWinner(selectedCharacters) {
 
 
 
+
+
+
 }
 
 
 
-  // const selectedPokemonContainer = document.getElementById("selectedPokemonContainer");
-
-  // selectedPokemonContainer.innerHTML = "";
-
-  // selectedCharacters.forEach((selectedPokemon) => {
-  //   const div = document.createElement("div");
-  //   const p = document.createElement("p");
-  //   const img = document.createElement("img");
-
-  //   img.src = selectedPokemon.image;
-  //   p.innerText = selectedPokemon.name.toUpperCase();
-
-  //   div.appendChild(img);
-  //   div.appendChild(p);
-
-  //   selectedPokemonContainer.appendChild(div);
-  // });
-
-
+ 
