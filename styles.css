@@ -1,5 +1,8 @@
 body {
-  background-image: url(https://t3.ftcdn.net/jpg/02/34/61/14/360_F_234611451_GXBPy4ZXln2f0AzHoIZLVExo5KEM1yG8.webp);
+  background-image: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/forest.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,12 +14,13 @@ header {
   align-items: center;
   font-size: 61px;
   margin-bottom: 2%;
+  background-color: white;
 }
 
 /* characters */
 
 .container {
-  background-color: gray;
+  /* background-color: gray; */
   border-radius: 10px;
   height: 70%;
   width: 90%;
@@ -24,8 +28,9 @@ header {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   padding: 2%;
-  border: dashed 5px black;
+  border: dashed 5px rgb(235, 200, 4);
   padding-bottom: 4%;
+  backdrop-filter: blur(10px)
 }
 
 #character {

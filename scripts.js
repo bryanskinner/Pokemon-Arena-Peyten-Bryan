@@ -1,5 +1,7 @@
 // import "./styles.css";
 
+let selectedCharacters = []
+
 let pokemonPlayers = (id) => {
   return fetch("https://pokeapi.co/api/v2/pokemon/" + id)
     .then((res) => {
@@ -20,9 +22,14 @@ let pokemonPlayers = (id) => {
           name: data.name,
           image: data.sprites.front_default
         };
-        localStorage.setItem("selectedPokemon", JSON.stringify(selectedPokemon)); //saves the selection
-     
-        div.classList.add("selected");
+
+        if(selectedCharacters.length < 2){
+          selectedCharacters.push(selectedPokemon)
+          div.classList.add("selected");
+        } else if(selectedCharacters.length >= 2){
+          alert("You've already selected two")
+        }
+
       });
       div.appendChild(img);
       div.appendChild(p);
