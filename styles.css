@@ -37,11 +37,14 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  padding: 2%;
+  padding: 1%;
   border: solid 5px black;
+
   padding-bottom: 4%;
   backdrop-filter: blur(10px);
   overflow: auto;
+
+ 
 }
 
 #character {
@@ -68,6 +71,7 @@ header {
   margin-bottom: 2rem;
 }
 
+
 .select:hover {
   background-color: #ffcc03;
   opacity: 0.8;
@@ -77,6 +81,7 @@ header {
 /* a:visited {
   color: black;
 } */
+
 
 .selected {
   border: 3px solid #ffcc03;
