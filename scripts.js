@@ -64,30 +64,66 @@ Promise.all(promises).then((results) => {
 
 
 
-// ------------------------------------------------------ Fight Section ----------------------------------------------//
+// ------------------------------------------------------ Fight Section ---------------------------------------------- //
 
-function theWinner(selectedCharacters) {
-
-  let player1 = selectedCharacters[0].name;
-  let player2 = selectedCharacters[1].name;
-  const p = document.createElement(`p`)
-
-  
-
-
-  let randomNumber = Math.floor(Math.random() * 2) + 1;
-
-  let winner = document.getElementById(`winner`);
-
-
-  if(randomNumber === 1) {
-    p.innerText = player1 + `Is The Winner`
-    winner.appendChild(p)
-  } else if(randomNumber === 2) {
-    p.innerText = player2 + `Is The Winner`
-    winner.appendChild(p)
+// * When the select button is clicked these events will happen
+document.getElementById("select").addEventListener("click", function() {
+  if (selectedCharacters.length < 2) {
+    alert("Please select two Pokémon.");
+    return;
   }
 
+  // * Gets the 2 selected pokemon on the screen
+  const selectedContainer = document.getElementById("pokemon-container");
+
+  selectedCharacters.forEach((pokemon) => {
+    const div = document.createElement("div");
+    const img = document.createElement("img");
+
+    img.src = pokemon.image;
+
+    div.appendChild(img);
+    selectedContainer.appendChild(div);
+  });
+});
+
+// * Gets the names of the 2 selected pokemon and replaces "pokemon1 and pokemon2"
+document.getElementById("select").addEventListener("click", function() {
+
+  const player1Element = document.getElementById("player1");
+  const player2Element = document.getElementById("player2");
+
+  const selectedPokemon1 = selectedCharacters[0].name.toUpperCase();
+  const selectedPokemon2 = selectedCharacters[1].name.toUpperCase();
+
+  player1Element.textContent = selectedPokemon1;
+  player2Element.textContent = selectedPokemon2;
+});
+
+
+
+// * When the fight button is pressed these events will happen
+document.getElementById("button").addEventListener("click", function() {
+
+
+  const player1 = selectedCharacters[0].name.toUpperCase();
+  const player2 = selectedCharacters[1].name.toUpperCase();
+  const randomValue = Math.random();
+  const winner = document.querySelector(".winner");
+  const p = document.createElement("p");
+
+// * Decideds the winner by using Math.Random, if player1 is less than 0.5 than they win, else player2 wins
+  if (randomValue < 0.5) {
+    winnerText = `${player1} is the winner!`;
+  } else {
+    winnerText = `${player2} is the winner!`;
+  }
+
+  p.innerText = winnerText;
+  winner.appendChild(p);
+
+
+});
 
 
 
@@ -103,7 +139,11 @@ function theWinner(selectedCharacters) {
 
 
 
-}
+
+
+
+
+
 
 
 
