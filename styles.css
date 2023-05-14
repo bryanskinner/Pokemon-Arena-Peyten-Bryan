@@ -93,6 +93,10 @@ header {
 
 
 
+/* ----------------------------FIGHT-SECTION-------------------------------------------------- */
+
+
+
 .fight-section {
   background-image: url(./background-images/Arena-Background.png);
   background-size: cover;
@@ -152,6 +156,12 @@ header {
   background-color: #F8B200;
 }
 
+#pokemon-container {
+  display: flex;
+  gap: 30rem;
+  position: absolute;
+  bottom: 44%;
+}
 
 
 
