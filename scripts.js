@@ -73,13 +73,9 @@ function theWinner(selectedCharacters) {
   let player2 = selectedCharacters[1].name;
   const p = document.createElement(`p`)
 
-  
-
-
   let randomNumber = Math.floor(Math.random() * 2) + 1;
 
   let winner = document.getElementById(`winner`);
-
 
   if(randomNumber === 1) {
     p.innerText = player1 + `Is The Winner`
@@ -91,19 +87,30 @@ function theWinner(selectedCharacters) {
 
 
 
+}
 
 
+function onYouTubeIframeAPIReady() {
+  const player = new YT.Player('player', {
+    height: '0',
+    width: '0',
+    videoId: '2iDO0lgcp5Y',
+    playerVars: {
+      autoplay: 1,
+      loop: 1,
+      playlist: '2iDO0lgcp5Y',
+      controls: 0,
+      showinfo: 0,
+      modestbranding: 1
+    },
+    events: {
+      onReady: onPlayerReady
+    }
+  });
+}
 
-
-
-
-
-
-
-
-
-
-
+function onPlayerReady(event) {
+  event.target.setVolume(100);
 }
 
 
