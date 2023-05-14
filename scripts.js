@@ -1,4 +1,9 @@
-const audio = new Audio('08 - Battle! (Hop).mp3');
+const audio = new Audio();
+const source = document.createElement('source');
+source.src = '08 - Battle! (Hop).mp3';
+source.type = 'audio/mpeg';
+
+audio.appendChild(source);
 audio.autoplay = true;
 
 
