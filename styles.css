@@ -165,9 +165,9 @@ header {
 
 #pokemon-container {
   display: flex;
-  gap: 23rem;
+  gap: 24rem;
   position: absolute;
-  bottom: 41%;
+  bottom: 40%;
 }
 
 
