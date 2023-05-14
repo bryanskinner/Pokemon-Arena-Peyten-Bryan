@@ -15,7 +15,7 @@
 header {
   justify-content: center;
   align-items: center;
-  font-size: 61px;
+  font-size: 41px;
   margin-top: 1%;
   margin-bottom: 1%;
   background-color: white;
@@ -56,7 +56,7 @@ header {
 }
 
 #image {
-  width: 90px;
+  width: 70px;
   height: auto;
 }
 
@@ -118,7 +118,7 @@ header {
 
 .scoreboard {
   font-family: 'Tilt Warp', cursive;
-  font-size: 38px;
+  font-size: 35px;
   text-align: center;
   color: #ffcc00; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
@@ -127,7 +127,7 @@ header {
 
 .winner {
   font-family: 'Tilt Warp', cursive;
-  font-size: 42px;
+  font-size: 35px;
   color: #ff0000; 
   margin-top: 20px;
 }
@@ -189,7 +189,7 @@ header {
 
 #pokemon-container {
   display: flex;
-  gap: 35rem;
+  gap: 30rem;
   position: absolute;
   bottom: 43%;
 }
