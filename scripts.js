@@ -102,8 +102,10 @@ document.getElementById("select").addEventListener("click", function() {
 
 
 
+
 // * When the fight button is pressed these events will happen
 document.getElementById("button").addEventListener("click", function() {
+
 
 
   const player1 = selectedCharacters[0].name.toUpperCase();
@@ -117,6 +119,7 @@ document.getElementById("button").addEventListener("click", function() {
     winnerText = `${player1} is the winner!`;
   } else {
     winnerText = `${player2} is the winner!`;
+
   }
 
   p.innerText = winnerText;
@@ -126,18 +129,32 @@ document.getElementById("button").addEventListener("click", function() {
 });
 
 
+}
 
 
+function onYouTubeIframeAPIReady() {
+  const player = new YT.Player('player', {
+    height: '0',
+    width: '0',
+    videoId: '2iDO0lgcp5Y',
+    playerVars: {
+      autoplay: 1,
+      loop: 1,
+      playlist: '2iDO0lgcp5Y',
+      controls: 0,
+      showinfo: 0,
+      modestbranding: 1
+    },
+    events: {
+      onReady: onPlayerReady
+    }
+  });
+}
 
 
-
-
-
-
-
-
-
-
+function onPlayerReady(event) {
+  event.target.setVolume(100);
+}
 
 
 
