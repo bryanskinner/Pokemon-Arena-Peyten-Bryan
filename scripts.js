@@ -119,7 +119,52 @@ document.getElementById("button").addEventListener("click", function() {
 
   p.innerText = winnerText;
   winner.appendChild(p);
+
+  this.style.display = "none";
+
+  const replayButton = document.getElementById("replay-button");
+  replayButton.style.display = "block";
 });
+
+
+
+// * Replay button that resets the ui when clicked
+document.getElementById("replay-button").addEventListener("click", function() {
+  selectedCharacters = [];
+
+  // * Deselects the pokemon
+  const selectedPokemon = document.querySelectorAll(".selected");
+  selectedPokemon.forEach(pokemon => pokemon.classList.remove("selected"));
+
+  // * Resets the UI
+  const selectedContainer = document.getElementById("pokemon-container");
+  selectedContainer.innerHTML = "";
+
+  const player1Element = document.getElementById("player1");
+  const player2Element = document.getElementById("player2");
+
+  player1Element.textContent = "Pokemon 1";
+  player2Element.textContent = "Pokemon 2";
+
+  const winner = document.querySelector(".winner");
+  winner.textContent = "";
+
+
+  const fightButton = document.getElementById("button");
+  fightButton.style.display = "block";
+
+  this.style.display = "none";
+
+  // *scrolls back to the "selection-section" when clicked
+  const selectionSection = document.getElementById("selection-section");
+  selectionSection.scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+
+
+
 
 //Plays music on load
 // function onYouTubeIframeAPIReady() {
