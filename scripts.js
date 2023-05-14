@@ -20,6 +20,7 @@ let pokemonPlayers = (id) => {
       const p = document.createElement("p");
       const img = document.createElement("img");
       img.setAttribute("class", charName);
+      img.setAttribute("id", "image")
       div.setAttribute("id", "character");
       div.setAttribute("data-name", charName);
       div.setAttribute("data-image", data.sprites.front_default);
@@ -121,18 +122,21 @@ document.getElementById("button").addEventListener("click", function() {
 });
 
 //Plays music on load
-function onYouTubeIframeAPIReady() {
-  const player = new YT.Player('player', {
-    height: '0',
-    width: '0',
-    videoId: '2iDO0lgcp5Y',
-    playerVars: {
-      autoplay: 1,
-      loop: 1,
-      playlist: '2iDO0lgcp5Y'
-    }
-  })
-}
+// function onYouTubeIframeAPIReady() {
+//   const player = new YT.Player('player', {
+//     height: '0',
+//     width: '0',
+//     videoId: '2iDO0lgcp5Y',
+//     playerVars: {
+//       autoplay: 1,
+//       loop: 1,
+//       playlist: '2iDO0lgcp5Y'
+//     }
+//   })
+// }
+
+const audio = new Audio('08 - Battle! (Hop).mp3');
+  audio.autoplay = true;
 
 
 
