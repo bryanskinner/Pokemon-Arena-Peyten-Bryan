@@ -1,3 +1,5 @@
+const audio = new Audio('08 - Battle! (Hop).mp3');
+audio.autoplay = true;
 
 
 // * smoothly scrolls to the "fight-section" when the selected button is pressed
@@ -135,8 +137,7 @@ document.getElementById("button").addEventListener("click", function() {
 //   })
 // }
 
-const audio = new Audio('08 - Battle! (Hop).mp3');
-  audio.autoplay = true;
+
 
 
 
