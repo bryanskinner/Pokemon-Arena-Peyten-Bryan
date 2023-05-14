@@ -1,6 +1,6 @@
 const audio = new Audio();
 const source = document.createElement('source');
-source.src = '08 - Battle! (Hop).mp3';
+source.src = './08 - Battle! (Hop).mp3';
 source.type = 'audio/mpeg';
 
 audio.appendChild(source);
