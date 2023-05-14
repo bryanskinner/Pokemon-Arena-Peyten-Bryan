@@ -55,6 +55,11 @@ header {
   align-items: center;
 }
 
+#image {
+  width: 90px;
+  height: auto;
+}
+
 .select {
   display: inline-block;
   padding: 20px 30px;
