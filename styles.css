@@ -16,6 +16,7 @@ header {
   justify-content: center;
   align-items: center;
   font-size: 61px;
+  margin-top: 1%;
   margin-bottom: 1%;
   background-color: white;
   border-radius: 5px;
@@ -158,13 +159,48 @@ header {
 
 #pokemon-container {
   display: flex;
-  gap: 30rem;
+  gap: 35rem;
   position: absolute;
-  bottom: 44%;
+  bottom: 43%;
 }
 
 
+/* Character Animations */
+.slide-in-left {
+  animation: slideInLeft 3s ease-in-out forwards;
+}
 
+.slide-in-right {
+  animation: slideInRight 3s ease-in-out forwards;
+}
+
+.slide-in-left img,
+.slide-in-right img {
+  width: 150px; /* Adjust the width as desired */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 
 
